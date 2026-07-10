@@ -18,7 +18,7 @@ $$\mathrm{d}J_t = \mu(J_t)\ \mathrm{d}t + \sigma(J_t)\ \mathrm{d}W_t + \big(\rho
 
 or, equivalently, in integral form
 
-$$J_t = x_0 + \int_0^t \mu(J_s)\, \mathrm{d}s + \int_0^t \sigma(J_s)\, \mathrm{d}W_s + \int_0^t \big(\rho(J_{s^-}, Y_{C_s}) - J_{s^-}\big)\, \mathrm{d}C_s$$
+$$J_t = x_0 + \int_0^t \mu(J_s) \mathrm{d}s + \int_0^t \sigma(J_s) \mathrm{d}W_s + \int_0^t \big(\rho(J_{s^-}, Y_{C_s}) - J_{s^-}\big) \mathrm{d}C_s$$
 
 where
 
