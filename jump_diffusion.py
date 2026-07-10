@@ -75,15 +75,12 @@ class JumpDiffusion:
 
     @staticmethod
     def monte_carlo(paths, f=lambda x: x, t=None):
-        # index of the evaluation time: the last grid point by default,
-        # otherwise the grid point closest to t
         if t is None:
             i = -1
         else:
             grid = paths[0].t
             i = int(np.argmin(np.abs(grid - t)))
 
-        # evaluate f at the path values at that time
         values = []
         for p in paths:
             values.append(f(p.J[i]))
