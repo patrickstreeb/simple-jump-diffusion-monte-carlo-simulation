@@ -2,6 +2,10 @@
 
 Monte Carlo simulation of jump diffusions (diffusions with jumps, cf. [1, Ch. VI]).
 
+![Simulated jump diffusion path](example_path.png)
+
+*One simulated path with its jumps marked in red, produced by the Quick start example below.*
+
 ## Structure
 
 ![Structure diagram](structure_diagram.svg)
