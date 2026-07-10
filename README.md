@@ -14,7 +14,7 @@ Monte Carlo simulation of jump diffusions (diffusions with jumps, cf. [1, Ch. VI
 
 The jump diffusion $J$ with initial value $J_0 = x_0$ follows the dynamic
 
-$$\mathrm{d}J_t = \mu(J_t)\ \mathrm{d}t + \sigma(J_t)\ \mathrm{d}W_t + \big(\rho(J_{t^-}, Y_{C_t}) - J_{t^-}\big)\ \mathrm{d}C_t$$
+$$\mathrm{d}J_t = \mu(J_t) \mathrm{d}t + \sigma(J_t) \mathrm{d}W_t + \big(\rho(J_{t^-}, Y_{C_t}) - J_{t^-}\big) \mathrm{d}C_t$$
 
 or, equivalently, in integral form
 
