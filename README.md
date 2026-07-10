@@ -8,21 +8,21 @@ Monte Carlo simulation of jump diffusions (diffusions with jumps, cf. [1, Ch. VI
 
 ## Model
 
-The jump diffusion $J$ follows the dynamic
+The jump diffusion $J$ with initial value $J_0 = x_0$ follows the dynamic
 
-$$\mathrm{d}J_t = \mu(J_t)\, \mathrm{d}t + \sigma(J_t)\, \mathrm{d}W_t + \big(\rho(J_{t^-}, Y_{C_t}) - J_{t^-}\big)\, \mathrm{d}C_t, \qquad J_0 = x_0,$$
+$$\mathrm{d}J_t = \mu(J_t)\, \mathrm{d}t + \sigma(J_t)\, \mathrm{d}W_t + \big(\rho(J_{t^-}, Y_{C_t}) - J_{t^-}\big)\, \mathrm{d}C_t$$
 
 or, equivalently, in integral form
 
-$$J_t = x_0 + \int_0^t \mu(J_s)\, \mathrm{d}s + \int_0^t \sigma(J_s)\, \mathrm{d}W_s + \sum_{k=1}^{C_t} \big(\rho(J_{\tau_k^-}, Y_k) - J_{\tau_k^-}\big),$$
+$$J_t = x_0 + \int_0^t \mu(J_s)\, \mathrm{d}s + \int_0^t \sigma(J_s)\, \mathrm{d}W_s + \int_0^t \big(\rho(J_{s^-}, Y_{C_s}) - J_{s^-}\big)\, \mathrm{d}C_s$$
 
 where
 
-- $\mu \colon \mathbb{R} \to \mathbb{R}$ is the drift coefficient,
-- $\sigma \colon \mathbb{R} \to (0, \infty)$ is the diffusion coefficient,
+- $\mu$ is the drift coefficient, a function from $\mathbb{R}$ to $\mathbb{R}$,
+- $\sigma$ is the diffusion coefficient, a function from $\mathbb{R}$ to $(0, \infty)$,
 - $W$ is a standard Brownian motion,
 - $C$ is a counting process with jump times $\tau_1, \tau_2, \ldots$ and state-dependent intensity function $h$, i.e. jumps arrive at rate $h(J_t)$,
-- $\rho \colon \mathbb{R}^2 \to \mathbb{R}$ is the function of jumps: the $k$-th jump takes the process from the pre-jump value $J_{\tau_k^-}$ to $\rho(J_{\tau_k^-}, Y_k)$,
+- $\rho$ is the function of jumps, a function from $\mathbb{R}^2$ to $\mathbb{R}$, i.e. the $k$-th jump takes the process from the pre-jump value $J_{\tau_k^-}$ to $\rho(J_{\tau_k^-}, Y_k)$,
 - $Y_k$, $k = 1, 2, \ldots$, are i.i.d. random variables which determine the values of the jumps,
 - $x_0 \in \mathbb{R}$ is the initial value.
 
